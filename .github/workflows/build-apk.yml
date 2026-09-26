@@ -32,7 +32,7 @@ jobs:
                 
       - name: Build APK
         working-directory: project/MartabakMiniAndroid
-        run: gradle assembleDebug -Dkotlin.jvm.target.validation.mode=ignore
+        run: gradle assembleDebug -Pkotlin.jvm.target.validation.mode=ignore
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
