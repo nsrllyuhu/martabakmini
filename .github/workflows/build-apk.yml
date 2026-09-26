@@ -29,10 +29,10 @@ jobs:
         uses: gradle/actions/setup-gradle@v6
         with:
           gradle-version: '8.9'
-
+                
       - name: Build APK
         working-directory: project/MartabakMiniAndroid
-        run: gradle assembleDebug
+        run: gradle assembleDebug -Dkotlin.jvm.target.validation.mode=ignore
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
